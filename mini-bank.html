@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking App</title>
+  <link rel="stylesheet" href="mini-bank.css">
+</head>
+<body>
+
+  <h1>Banking App</h1>
+
+  <p class="message"></p>
+
+
+  <section>
+    <h2>Create Account</h2>
+    <input type="text" class="new-name" placeholder="Your name" />
+    <button class="mm" onclick="createAccount()">Create</button>
+  </section>
+
+  <hr>
+
+
+  <section>
+    <h2>Deposit</h2>
+    <input type="text" class="deposit-accnum" placeholder="Account number" />
+    <input type="number" class="deposit-amount" placeholder="Amount" />
+    <button class="mm" onclick="deposit()">Deposit</button>
+  </section>
+
+  <hr>
+
+
+  <section>
+    <h2>Withdraw</h2>
+    <input type="text" class="withdraw-accnum" placeholder="Account number" />
+    <input type="number" class="withdraw-amount" placeholder="Amount" />
+    <button class="mm" onclick="withdraw()">Withdraw</button>
+  </section>
+
+  <hr>
+
+
+  <section>
+    <h2>Check Balance</h2>
+    <input type="text" class="balance-accnum" placeholder="Account number" />
+    <button class="mm" onclick="checkBalance()">Check</button>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Transfer</h2>
+    <input type="text" class="transfer-from" placeholder="From account" />
+    <input type="text" class="transfer-to" placeholder="To account" />
+    <input type="number" class="transfer-amount" placeholder="Amount" />
+    <button class="mm" onclick="transfer()">Transfer</button>
+  </section>
+
+  <script>
+
+    let accounts = {};
+
+    function showMessage(text) {
+      document.getElementById("message").textContent = text;
+    }
+
+    function createAccount() {
+      let name = document.getElementById("new-name").value;
+      let accNum = Math.floor(100000 + Math.random() * 900000).toString();
+      accounts[accNum] = { name: name, balance: 0 };
+      showMessage("Account created! Name: " + name + " | Account no: " + accNum);
+    }
+
+    function deposit() {
+      let accNum = document.getElementById("deposit-accnum").value;
+      let amount = Number(document.getElementById("deposit-amount").value);
+      if (!accounts[accNum]) return showMessage("Account not found.");
+      accounts[accNum].balance += amount;
+      showMessage("Deposited $" + amount + ". New balance: $" + accounts[accNum].balance);
+    }
+
+    function withdraw() {
+      let accNum = document.getElementById("withdraw-accnum").value;
+      let amount = Number(document.getElementById("withdraw-amount").value);
+      if (!accounts[accNum]) return showMessage("Account not found.");
+      if (amount > accounts[accNum].balance) return showMessage("Insufficient funds.");
+      accounts[accNum].balance -= amount;
+      showMessage("Withdrew $" + amount + ". Remaining balance: $" + accounts[accNum].balance);
+    }
+
+    function checkBalance() {
+      let accNum = document.getElementById("balance-accnum").value;
+      if (!accounts[accNum]) return showMessage("Account not found.");
+      showMessage(accounts[accNum].name + "'s balance: $" + accounts[accNum].balance);
+    }
+
+    function transfer() {
+      let fromAccNum = document.getElementById("transfer-from").value;
+      let toAccNum = document.getElementById("transfer-to").value;
+      let amount = Number(document.getElementById("transfer-amount").value);
+      if (!accounts[fromAccNum] || !accounts[toAccNum]) return showMessage("Account not found.");
+      if (amount > accounts[fromAccNum].balance) return showMessage("Insufficient funds.");
+      accounts[fromAccNum].balance -= amount;
+      accounts[toAccNum].balance += amount;
+      showMessage("Transferred $" + amount + " from " + accounts[fromAccNum].name + " to " + accounts[toAccNum].name + ".");
+    }
+
+  </script>
+</body>
+</html>

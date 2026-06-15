@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tradeapp.css">
+</head>
+<body>
+    <!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Discipline App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>📊 Trading Discipline Tracker</h1>
+
+```
+<div class="form">
+  <input type="text" id="pair" placeholder="Pair (e.g XAUUSD)">
+  <input type="number" id="risk" placeholder="Risk ($)">
+  <input type="number" id="reward" placeholder="Reward ($)">
+  
+  <label>
+    Followed Plan?
+    <select id="plan">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  </label>
+
+  <button onclick="addTrade()">Add Trade</button>
+</div>
+
+<div class="stats">
+  <h2>Performance</h2>
+  <p>Total Trades: <span id="total"></span></p>
+  <p>Total Risk: $<span id="totalRisk"></span></p>
+  <p>Total Reward: $<span id="totalReward"></span></p>
+  <p>Discipline Score: <span id="discipline"></span>%</p>
+  <p>RR Ratio: <span id="rr"></span></p>
+</div>
+```
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
+<script src="trade.js"></script>
+</body>
+</html>

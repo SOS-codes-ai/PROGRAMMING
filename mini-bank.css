@@ -1,0 +1,63 @@
+body{
+    text-align: center;
+    background-color: beige;
+}
+.mm{
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: lightblue;
+}
+.new-name{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.deposit-accnum{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.deposit-amount{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.withdraw-accnum{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.withdraw-amount{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.balance-accnum{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.transfer-from{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.transfer-to{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}
+.transfer-amount{
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    background-color: lightyellow;
+}

@@ -1,0 +1,77 @@
+/* Make body cover the whole page and center content */
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Card for all pages */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Question text bigger */
+.question-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Answers container */
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Answer buttons numbered */
+.answers-container button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Highlight selected */
+.answers-container button.selected {
+    background: #34D399;
+    color: white;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    margin-top: 20px;
+}
+.start-btn{
+    cursor: not-allowed;
+}
+
+.nav-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+}
+
+/* Hide inactive pages */
+.hidden {
+    display: none;
+}

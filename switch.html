@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="switch.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <button>toggle dark mode</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nemo in dicta accusamus saepe, aliquid reprehenderit illum ex a aut qui suscipit quidem reiciendis ea? Nisi qui dolor doloribus aut!
+    </p>
+</body>
+<script>
+    let isDark = false;
+   const button = document.body.firstElementChild
+   const p = document.body.children[1]
+   button.addEventListener("click", handleToggle)
+
+   function handleToggle(){
+    isDark = !isDark
+
+    if (isDark){
+        button.textContent = "toggle light mode"
+        button.style.color = "blue"
+        document.body.style.backgroundColor = "black"
+        p.style.color = "white"
+    } else {
+         button.textContent = "toggle dark mode"
+         button.style.color = "black"
+         document.body.style.backgroundColor = "white"
+         p.style.color = "black"
+    }
+   }
+</script>
+</html>

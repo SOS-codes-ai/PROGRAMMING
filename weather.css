@@ -1,0 +1,39 @@
+.container{
+    background-color: darkslateblue;
+    display: grid;
+    /* border: 300px; */
+    /* margin: 2px solid blue; */
+    /* width: 90%; */
+    /* height: 100%; */
+}
+.color{
+    background-color: blueviolet;
+}
+.mag{
+    text-align: center;
+    color: white;
+    margin-bottom: 200px;
+}
+.input{
+    width: 300px;
+    /* margin-bottom: 50px; */
+}
+.shift{
+    text-align: center;
+    margin-bottom: 200px;
+}
+.country{
+     background: linear-gradient(135deg, #3b4bd1, #1b1e3b);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    display: grid;
+    justify-content: space-between;
+    align-items: center; 
+}
+.components{
+    background-color: aqua;
+    grid-row: 1/4;
+    gap: 10px;
+    display: grid;
+}
